@@ -19,8 +19,27 @@ def test_parse_float():
         s = str(i)
         assert parse_float(s) == i
 
+#feature to convert string to lowewr case
 def test_parse_string():
-    print("\ntest_parse_string\n")
-    for i in ('1', '2', '3', '4', '5', '6'):
-        s = int(i)
-        assert parse_string(s) == i
+    assert parse_string('HUMAN') == 'human'
+    assert parse_string('snow') == 'snow'
+    assert parse_string('purPLE') == 'purple'
+    assert parse_string('leARn') == 'learn'
+    assert parse_string('CREDIT') == 'credit'
+    assert parse_string('Journal') == 'journal'
+    assert parse_string('HaPpY') == 'happy'
+
+#feature to find if a string has vowels
+def test_evaluate_string():
+    assert evaluate_string('sync') == False
+    assert evaluate_string('CAT') == True
+    assert evaluate_string('Myth') == False
+    assert evaluate_string('laUgh') == True
+    assert evaluate_string('Acquire') == True
+    assert evaluate_string('Shy') == False
+    assert evaluate_string('wYns') == False
+    assert evaluate_string('THYMM') == False
+    assert evaluate_string('Project') == True
+    assert evaluate_string('lyMPH') == False
+    assert evaluate_string('mothER') == True
+    

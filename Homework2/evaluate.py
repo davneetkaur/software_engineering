@@ -9,5 +9,15 @@ def parse_float(s):
     return i
 
 def parse_string(s):
-    i = str(s)
+    i = str(s).lower()
     return i
+
+def evaluate_string(s):
+    try:
+        st = parse_string(s)
+        if any(i in st for i in 'aeiou'):
+            return True
+        else:
+            return False
+    except ValueError:
+        return False
