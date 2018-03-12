@@ -43,3 +43,4 @@ def test_evaluate_string():
     assert evaluate_string('lyMPH') == False
     assert evaluate_string('mothER') == True
     
+    
